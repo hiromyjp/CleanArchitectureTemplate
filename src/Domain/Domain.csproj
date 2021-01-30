@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Hiro.Core.Domain</AssemblyName>
+    <RootNamespace>Hiro.Core.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Class Diagrams\" />
+  </ItemGroup>
+
+</Project>
