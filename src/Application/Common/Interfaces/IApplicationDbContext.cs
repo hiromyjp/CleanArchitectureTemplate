@@ -8,7 +8,7 @@ namespace Hiro.Core.Application.Common.Interfaces
     public interface IApplicationDbContext
     {
 
-        DbSet<Deposito> Depositos { get; set; }
+        DbSet<Warehouse> Warehouses { get; set; }
 
 
         //DbSet<>

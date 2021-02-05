@@ -1,26 +1,19 @@
-﻿using Hiro.Infrastructure.Persistence;
+﻿using Hiro.Core.Domain.Entities;
+using System.Linq;
 
 namespace Hiro.Infrastructure.Persistence
 {
     class ApplicationDbContextSeedTestData
     {
 
-        public static void SeedDepositos(ApplicationDbContext dbContext)
+        public static void SeedWarehouses(ApplicationDbContext dbContext)
         {
-            //if (dbContext.Depositos.Count() == 0)
-            //{
-            //    dbContext.Fazendas.ToList().ForEach(f =>
-            //    {
-            //        var deposito = new Deposito()
-            //        {
-            //            Id = Guid.NewGuid(),
-            //            Nome = "Deposito " + f.Nome,
-            //            CodigoParceiro = "Deposito " + f.Nome,
-            //        };
-            //        dbContext.Depositos.Add(deposito);
-            //    });
-            //    dbContext.SaveChanges();
-            //}
+            if (dbContext.Warehouses.Count() == 0)
+            {
+                var warehouse = new Warehouse("Main Warehouse", 1);
+                dbContext.Warehouses.Add(warehouse);
+                dbContext.SaveChanges();
+            }
         }
 
     }

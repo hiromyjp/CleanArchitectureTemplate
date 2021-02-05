@@ -10,10 +10,10 @@ namespace Hiro.Infrastructure.Persistence
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            ApplicationDbContextSeedTestData.SeedDepositos(this);
+            ApplicationDbContextSeedTestData.SeedWarehouses(this);
         }
 
-        public DbSet<Deposito> Depositos { get; set; }
+        public DbSet<Warehouse> Warehouses { get; set; }
 
 
         /// <summary>
