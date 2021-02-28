@@ -7,6 +7,7 @@ using Hiro.Infrastructure.Identity;
 using Hiro.Infrastructure.Identity.Context;
 using Hiro.Infrastructure.Identity.Models;
 using Hiro.Infrastructure.Persistence;
+using Hiro.Presentation.WebApi.Middlewares;
 using Hiro.Presentation.WebApi.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -127,6 +128,7 @@ namespace WebApi
                 c.SwaggerEndpoint(url: "/swagger/v1/swagger.json", name: "MoriyaAPI");
             });
 
+            app.UseMiddleware<ErrorHandler>();
 
             app.UseHttpsRedirection();
 
